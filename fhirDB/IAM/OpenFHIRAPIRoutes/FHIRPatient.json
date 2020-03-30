@@ -1,0 +1,14 @@
+{
+    "name": "FHIRPatient",
+    "protocols": ["http", "https"],
+    "methods": ["GET", "POST", "PATCH", "DELETE"],
+    "hosts": ["localhost"],
+    "paths": ["/Patient"],
+    "https_redirect_status_code": 426,
+    "regex_priority": 0,
+    "strip_path": false,
+    "path_handling": "v0",
+    "preserve_host": false,
+    "tags": ["user-level", "low-priority"],
+    "service": {"name":"FHIRService"}
+}

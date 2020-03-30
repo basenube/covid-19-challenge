@@ -1,0 +1,11 @@
+{
+    "host": "fhirDB",
+    "name": "FHIRService",
+    "retries": 5,
+    "protocol": "http",
+    "port": 52773,
+    "path": "/",
+    "connect_timeout": 60000,
+    "write_timeout": 60000,
+    "read_timeout": 60000
+}
