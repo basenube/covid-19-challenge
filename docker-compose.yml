@@ -4,7 +4,7 @@ services:
   fhirDB:
     build:
       context: ./fhirDB
-    image: amirsamary/irisdemo:fhir_DB
+    image: leblancisc/covid-19-challenge:fhir_DB
     command: --key /irislicense/iris.key -a /IAM/load_swagger_specs.sh
     hostname: fhirDB
     restart: on-failure
@@ -18,7 +18,7 @@ services:
         target: /irislicense
 
   iam-migrations:
-    image: amirsamary/irisdemo:iam.IAM-stable
+    image: leblancisc/covid-19-challenge:iam.IAM-stable
     command: kong migrations up
     depends_on:
       - db
@@ -36,7 +36,7 @@ services:
       - db:db
 
   iam:
-    image: amirsamary/irisdemo:iam.IAM-stable
+    image: leblancisc/covid-19-challenge:iam.IAM-stable
     hostname: iam
     depends_on:
       - db
@@ -104,32 +104,6 @@ services:
     stdin_open: true
     tty: true
 
-  #datadog:
-  #  image: phillip_dd_agent:latest
-  #  hostname: datadog
-  #  depends_on:
-  #    - iam
-  #  ports:
-  #    - "8125:8125/udp" # 51773 is the superserver default port
-  #    - "8126:8126/udp" # 52773 is the webserver/management portal port
-  #  environment:
-  #    - DD_API_KEY=adaa03f9c83adce501e9acbb77434bf0
-  #    - DD_DOGSTATSD_NON_LOCAL_TRAFFIC=true
-  #    - DD_LOGS_ENABLED=true
-  #  volumes:
-  #    - /var/run/docker.sock:/var/run/docker.sock
-  #    - /proc/:/host/proc/:ro
-  #    - /sys/fs/cgroup:/host/sys/fs/cgroup:ro
-  #    - type: bind
-  #      source: ./fhirDB/datadog/kong.d
-  #      target: /etc/datadog-agent/conf.d/kong.d
-  #  links:
-  #    - iam # ensures that iam is a host that the container can find
-  #  labels:
-  #    com.datadoghq.ad.check_names: '[kong]'
-  #    com.datadoghq.ad.init_configs: '[{}}]'
-  #    com.datadoghq.ad.instances: '[{"kong_status_url": "http://iam:8001/status/"}]'
-  #    com.datadoghq.ad.logs: '[{"source": "kong", "service": "FHIRService"}]'
 
 volumes:
   pgdata:

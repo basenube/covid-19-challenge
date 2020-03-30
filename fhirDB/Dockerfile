@@ -1,4 +1,4 @@
-FROM amirsamary/irisdemo:irishealthdemoint-2020.1.0
+FROM leblancisc/covid-19-challenge:irishealthdemoint-2020.1.0
 
 LABEL maintainer="Phillip Booth <phillip.booth@intersystems.com>"
 
