@@ -10,7 +10,7 @@ This demo comes pre-configured with a FHIR server, pre-populated with synthetic 
 
 ------
 
-The Demo can be run quickly with the following steps.
+The demo can be run locally with the following steps:
 
 1. git clone https://github.com/sleblanc0916/covid-19-challenge.git
 2. cd into the covid-19-challenge directory where docker-compose.yml is located
