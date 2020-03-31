@@ -4,7 +4,7 @@
 
 ------
 
-Patrick to provide Inro here
+This demo comes pre-configured with a FHIR server, pre-populated with synthetic patient data.  The new InterSystems API Manager (IAM) includes OpenAPI Swagger specs to quickly generate REST client code to work with many common FHIR resources.   
 
 ### How to Run the Demo
 
@@ -12,12 +12,11 @@ Patrick to provide Inro here
 
 The Demo can be run quickly with the following steps.
 
-1. Acquire an Intersystems License Key that enables access to IAM. This license key needs to be added to the folder to IRISLicense in the root of the project.
-2. cd into the FHIR-API_MAnagement directory where the Makefile is located.
-3. Run **make build** to build the necessary images on your machine.
-4. Run **make run** 
+1. git clone https://github.com/sleblanc0916/covid-19-challenge.git
+2. cd into the covid-19-challenge directory where docker-compose.yml is located
+3. Run "docker-compose up --build"
 
-
+Please note that the build can take 15-20 minutes, with most of the time spent loading synthetic patient data.  Make sure that you have at least 20GB of disk space.
 
 After perfomring these actions your demo should be up and running on your machine. This includes an instance of InterSystems IRIS running an underlying FHIR server, and an Instance of the Intersystems API manager.
 
@@ -27,10 +26,15 @@ After perfomring these actions your demo should be up and running on your machin
 
 ------
 
-After running the above commands you will have multipe Docker containers running on your machine. The most improtant ones are:
+After running the above commands you will have multipe Docker containers running on your machine. The most important ones are:
 
-- Intersystems IRIS for Health running on port 9088
+- Intersystems IRIS for Health running on port 9088 
+      - Management Portal: http://localhost:9088/csp/sys/UtilHome.csp
+      - Username: _SYSTEM 
+      - Password: sys
 - InterSystems API Manager running on 8002, and 8003
+      - API Manager Development Portal (FHIR Resource API Documentation): http://localhost:8003/default/documentation
+      - API Manager Overview: http://localhost:8002
 
 
 
