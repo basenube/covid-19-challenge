@@ -1,8 +1,8 @@
-FROM leblancisc/covid-19-challenge:irishealthdemoint-2020.1.0
+FROM intersystemsdc/irisdemo-base-irishealthint-community:version-1.7.1
 
 LABEL maintainer="Phillip Booth <phillip.booth@intersystems.com>"
 
-User root
+USER root
 #Need to install curl for performing automatic Swagger Spec Loading
 RUN apt-get update && apt-get install -y curl
 
