@@ -1,6 +1,7 @@
 #!/bin/bash
 cd /IAM/OpenFHIRAPIDefinitions
 
+
 service_up=0
 call_number=0
 
