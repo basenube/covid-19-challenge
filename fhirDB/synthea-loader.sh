@@ -6,8 +6,8 @@ if [ -z "$1" ];
 then
     numberOfPatients=10
 else
-    #numberOfPatients=$1
-    numberOfPatients=10
+    numberOfPatients=$1
+    #numberOfPatients=10
 fi
 
 docker run --rm -v $PWD/output:/output --name synthea-docker intersystemsdc/irisdemo-base-synthea:version-1.3.4 -p $numberOfPatients
