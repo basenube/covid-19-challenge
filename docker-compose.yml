@@ -56,7 +56,7 @@ services:
       KONG_PROXY_ERROR_LOG: /dev/stderr
       KONG_PORTAL: "on"
       KONG_PORTAL_GUI_PROTOCOL: http
-      KONG_PORTAL_GUI_HOST: "127.0.0.1:8003"
+      KONG_PORTAL_GUI_HOST: "localhost:8003"
       ISC_IRIS_URL: "http://IAM:sys@fhirDB:52773/api/iam/license"
     links:
       - db:db
