@@ -47,8 +47,15 @@ After running the above commands you will have multipe Docker containers running
 To take and make sure that your FHIR Server is up and running successfully you can test that you can successfully make requests to the exposed FHIR Endpoint. A tool like Postman can be very helpful here although it is not explicitly required. A simple curl request should work as well. I have provided an example request below (note the different port... the demo will run on 9088 by default)
 
 
-
 ![Screen Shot 2020-02-10 at 12.08.49 PM](./TestingDemo.png)
 
 
+
+### Additional Resources
+
+------
+
+• https://gettingstartedhealth.intersystems.com/interoperability/exploring-fhir-apis/	Exploring FHIR Resource APIs With InterSystems IRIS for Health
+•	http://clinfhir.com/: a UI for generating FHIR requests
+•	hl7.org/fhir/resourcelist.html: The official FHIR resource documentation
 
