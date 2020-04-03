@@ -59,6 +59,6 @@ To take and make sure that your FHIR Server is up and running successfully you c
   - Exploring FHIR Resource APIs With InterSystems IRIS for Health
 - http://clinfhir.com/
   - A UI for generating FHIR requests
-- hl7.org/fhir/resourcelist.html
+- http://hl7.org/fhir/resourcelist.html
   - The official FHIR resource documentation
 
