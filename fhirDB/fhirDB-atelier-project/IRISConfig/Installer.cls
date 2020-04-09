@@ -1,6 +1,6 @@
 Include %occInclude
 
-Class IRISConfig.Installer Extends IRISConfig.InstallerBase
+Class MSPConfig.FHIRInstaller
 {
 
 ClassMethod DisableJournalSystemWide() As %Status
