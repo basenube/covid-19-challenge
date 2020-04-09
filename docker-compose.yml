@@ -22,12 +22,12 @@ services:
     command: kong migrations up
     environment:
       KONG_DATABASE: postgres
-      KONG_PG_DATABASE: ${KONG_PG_DATABASE:-iam}
+      KONG_PG_DATABASE: IAM
       KONG_PG_HOST: RDSDB
       KONG_PG_PASSWORD: intersystems
       KONG_PG_USER: intersystems
       KONG_CASSANDRA_CONTACT_POINTS: RDSDB
-      ISC_IRIS_URL: "http://IAM:sys@fhirDB:52773/api/iam/license"
+      ISC_IRIS_URL: "http://IAM:sys@172.31.0.10:52773/api/iam/license"
     restart: on-failure
   iam:
     image: leblancisc/covid-19-challenge:iam.IAM-stable
@@ -48,7 +48,7 @@ services:
       KONG_PORTAL: "on"
       KONG_PORTAL_GUI_PROTOCOL: http
       KONG_PORTAL_GUI_HOST: "localhost:8003"
-      ISC_IRIS_URL: "http://IAM:sys@fhirDB:52773/api/iam/license"
+      ISC_IRIS_URL: "http://IAM:sys@172.31.0.10:52773/api/iam/license"
     ports:
       - target: 8000
         published: 8000
