@@ -6,7 +6,7 @@ call_number=0
 
 while [[ $service_up -ne 1 && $call_number -le 30 ]]
 do
-    echo "Performing Health Check On http://iam:8001/files/"
+    echo "Performing Health Check On http://localhost:8001/files/"
     call_number=$((call_number+1))
     echo "Performing call number $call_number"
     service_response_code=$(curl -s -i -w '%{response_code}' -o /dev/null -X GET --url http://iam:8001/files/)
@@ -15,7 +15,7 @@ do
         service_up=1
         echo 'Service is up'
         for filename in * ; do
-            curl -s -o /dev/null -X POST http://iam:8001/files \
+            curl -s -o /dev/null -X POST http://localhost:8001/files \
                 -F "type=spec" \
                 -F "name=${filename%%.*}_API_Spec" \
                 -F "contents=@${filename}"
