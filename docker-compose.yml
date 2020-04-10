@@ -1,21 +1,6 @@
 version: "3.7"
 
 services:
-  #fhirDB:
-  #  build:
-  #    context: ./fhirDB
-  #  image: leblancisc/covid-19-challenge:fhir_DB
-  #  command: --key /irislicense/iris.key -a /IAM/load_swagger_specs.sh
-  #  hostname: fhirDB
-  #  restart: on-failure
-  #  init: true
-  #  ports:
-  #    - "#9089:51773" # 51773 is the superserver default port
-  #    - "9088:52773" # 52773 is the webserver/management portal port
-  #  volumes:
-  #    - type: bind
-  #      source: ./IRISLicense/
-  #      target: /irislicense
 
   iam-migrations:
     image: leblancisc/covid-19-challenge:iam.IAM-stable
@@ -47,7 +32,7 @@ services:
       KONG_PROXY_ERROR_LOG: /dev/stderr
       KONG_PORTAL: "on"
       KONG_PORTAL_GUI_PROTOCOL: http
-      KONG_PORTAL_GUI_HOST: "localhost:8003"
+      KONG_PORTAL_GUI_HOST: "ELBDNS:8003"
       ISC_IRIS_URL: "http://IAM:sys@172.31.0.10:52773/api/iam/license"
     ports:
       - target: 8000
