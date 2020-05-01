@@ -9,7 +9,7 @@ do
     echo "Performing Health Check On http://localhost:8001/files/"
     call_number=$((call_number+1))
     echo "Performing call number $call_number"
-    service_response_code=$(curl -s -i -w '%{response_code}' -o /dev/null -X GET --url http://iam:8001/files/)
+    service_response_code=$(curl -s -i -w '%{response_code}' -o /dev/null -X GET --url http://localhost:8001/files/)
     echo "Service Response Code is: $service_response_code"
     if [ "$service_response_code" == "200" ]; then
         service_up=1
