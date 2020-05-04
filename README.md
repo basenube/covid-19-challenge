@@ -29,7 +29,7 @@ After perfomring these actions your demo should be up and running on your machin
 After running the above commands you will have multipe Docker containers running on your machine. The most important ones are:
 
 - Intersystems IRIS for Health running on port 9088 
-  - Management Portal: http://localhost:9088/csp/sys/UtilHome.csp
+  - Management Portal: http://172.31.0.10:52773/csp/sys/UtilHome.csp
     - Username: _SYSTEM 
     - Password: sys
 - InterSystems API Manager running on 8002, and 8003

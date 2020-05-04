@@ -5,7 +5,7 @@ info:
   title: FHIR R4 Organization Resource
   description: A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action. Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.
 
-host: localhost:9088
+host: 172.31.0.10:52773
 basePath: /csp/healthshare/fhirserver/fhir/r4
 schemes:
   - http

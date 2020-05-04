@@ -5,7 +5,7 @@ info:
   title: FHIR R4 AllergyIntolerance Resource
   description: A record of a clinical assessment of an allergy or intolerance; a propensity, or a potential risk to an individual, to have an adverse reaction on future exposure to the specified substance, or class of substance.
 
-host: localhost:9088
+host: 172.31.0.10:52773
 basePath: /csp/healthshare/fhirserver/fhir/r4
 schemes:
   - http

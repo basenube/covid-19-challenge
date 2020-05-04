@@ -5,7 +5,7 @@ info:
   title: FHIR R4 Patient Resource
   description: Demographics and other administrative information about an individual or animal receiving care or other health-related services.
 
-host: localhost:9088
+host: 172.31.0.10:52773
 basePath: /csp/healthshare/fhirserver/fhir/r4
 schemes:
   - http

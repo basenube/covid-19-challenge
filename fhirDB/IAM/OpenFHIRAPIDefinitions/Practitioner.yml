@@ -5,7 +5,7 @@ info:
   title: FHIR R4 Practitioner Resource
   description: A person who is directly or indirectly involved in the provisioning of healthcare.
 
-host: localhost:9088
+host: 172.31.0.10:52773
 basePath: /csp/healthshare/fhirserver/fhir/r4
 schemes:
   - http

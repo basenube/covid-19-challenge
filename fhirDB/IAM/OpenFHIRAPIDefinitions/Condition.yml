@@ -5,7 +5,7 @@ info:
   title: FHIR R4 Condition Resource
   description: This resource is used to record detailed information about a condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.
 
-host: localhost:9088
+host: 172.31.0.10:52773
 basePath: /csp/healthshare/fhirserver/fhir/r4
 schemes:
   - http
