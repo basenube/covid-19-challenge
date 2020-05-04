@@ -35,7 +35,7 @@ services:
       KONG_PORTAL_GUI_HOST: "ELBDNS:8003"
       KONG_API_PORTAL_URL: "http://ELBDNS:8444"
       KONG_ADMIN_GUI_AUTH: basic-auth
-      KONG_ADMIN_GUI_AUTH_CONF: {"hide_credentials":true}
+      #KONG_ADMIN_GUI_AUTH_CONF: {"hide_credentials":true}
       KONG_PASSWORD: PASSWORD
       ISC_IRIS_URL: "http://IAM:sys@172.31.0.10:52773/api/iam/license"
     ports:
